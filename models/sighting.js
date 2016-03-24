@@ -2,8 +2,8 @@ var mongoose = require('mongoose');
 
 var schema = new mongoose.Schema({
     
-    name: { type: String, lowercase: true, required: true },
-    order: { type: String, lowercase: true, maxlength: 20, required: true },
+    name: { type: String, lowercase: true },
+    order: { type: String, lowercase: true, maxlength: 20 },
     status: { 
         type: String, 
         lowercase: true, 
@@ -17,9 +17,9 @@ var schema = new mongoose.Schema({
             'conservation dependent',
             'least concern'
           ]},
-    numberSeen: { type: Number, min: 1 },
-    confirmed: { type: Boolean, default: false },
     
+    confirmed: { type: Boolean, default: false },
+    numberSeen: { type: Number, min: 1 }
     
 })
 
